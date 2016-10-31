@@ -1,0 +1,344 @@
+@darkgrey: #282828;
+@lightgrey: #888888;
+@superlightgrey: #eee;
+
+@fullwidth: 100%;
+@fullheight: 100vh;
+
+@clight: 'camptonlight_demo';
+@cbold: 'camptonbold_demo';
+
+
+@font-face {
+    font-family: @cbold;
+    src: url('../fonts/rene_bieder_-_campton_bold_demo-webfont.woff2') format('woff2'),
+         url('../fonts/rene_bieder_-_campton_bold_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: @clight;
+    src: url('../fonts/rene_bieder_-_campton_light_demo-webfont.woff2') format('woff2'),
+         url('../fonts/rene_bieder_-_campton_light_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+//nav{
+//    width: 2.85rem;
+//    background: @darkgrey;
+//    position: fixed;
+//    right: 0;
+//    top: 40%;
+//    box-shadow: -1px 2px 8px 1.5px #000;
+//    z-index: 82;
+//
+//    ul{
+//        float: right;
+//        text-decoration: none;
+//    }
+//    
+//    li{
+//        font-size: 1rem;
+//        padding: 1rem;
+//        display: block;
+//        color: white;
+//        font-family: 'camptonbold_demo';
+//        -webkit-transition: background-color 0.5s; /* Safari */
+//        transition: background-color 0.5s;
+//
+////            right: 20%;
+//        
+//        &:hover{
+//            background-color: @lightgrey;
+////            width: 5rem;
+//        }
+//    }
+//}
+
+
+h1{
+    font-size: 6rem;
+    font-family: @cbold;
+}
+
+h3{
+    font-size: 4rem;
+    font-family: @clight;
+}
+
+h1,h3, #down{
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 8px #000000;
+
+}
+#first-div-content{
+//    padding-top:30%;
+//    padding-left:30%;
+//    background: rgba(0,0,0,0.5);
+    height: 100%;
+    h1{
+        padding-top: @fullheight/4;
+    }
+    i{
+        margin-top: 8%;
+        padding-top: 2%;
+        margin-left: 45%;
+        padding-left: 4.5%;
+        padding-right: 4.5%;
+        top: @fullheight;
+        color: white;
+        text-shadow: 0px 0px 8px #000000;
+        cursor: pointer;
+
+        @keyframes bounce {
+        0%, 20%, 50%, 80%, 100%   {top:0px;}
+        40%   {top:-30px;}
+        60%   {top:-15px;}
+    
+        }
+    
+        position: relative;
+        animation-name: bounce;
+        animation-timing-function: ease-in-out ;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    
+}
+
+
+
+
+#first-div-bg{
+    height: @fullheight;
+    width: @fullwidth;
+    background-image: url("../images/programmer2.jpg");
+    background-size: cover;
+
+    
+}
+
+
+#second-div-content{
+    height: @fullheight;
+    width: @fullwidth;
+    
+}
+
+#second-top-left, #second-top-right, #second-bottom-left, #second-bottom-right{
+    
+    height: 50%;
+    width: 50%;
+    float: left;
+}
+
+#second-top-left, #second-bottom-right{
+    background-color: @superlightgrey;
+    
+    p{
+        padding-left: 3rem;
+        padding-right: 3rem;
+//        padding-bottom: 1rem;
+        padding-top: 2rem;
+        text-align: justify;
+        font-family: Helvetica;
+        font-size: 1rem;
+        
+    }
+}
+#second-top-right, #second-bottom-left{
+    background-image: url(../images/ui-design.jpg);
+    background-size: cover;
+    background-color: @darkgrey;
+    
+    img{
+        margin-top: 2rem;
+    }
+}
+
+#third-div-bg{
+    height: @fullheight;
+    width: @fullwidth;
+    background-image: url("../images/toronto2a.jpg");
+    background-size: cover;
+
+}
+
+
+
+
+#third-div-content{
+    padding: 10rem;
+//    width: @fullwidth;
+//    text-align: center;
+
+    #form{
+        border-radius: 2%;
+        margin-left: 30%;
+        width: 22rem;
+        padding: 1rem;
+        background: rgba(0,0,0,0.5);
+        input{
+            height: 2.5rem;
+            width: 21rem;
+            margin: 0.3rem;
+        }
+        
+        #submit{
+//            padding-top: 0.5rem;
+            width: 21.25rem;
+            font-family: @clight;
+            font-size: 1.2rem;
+        }
+        ::-webkit-input-placeholder {
+            text-transform: uppercase;
+            font-family: @clight;
+            font-size: 1.3rem;   
+            text-align: center;
+        }    
+        
+        span{
+            font-family: @clight;
+            color: white;
+            font-size: 2.5rem;
+            text-shadow: 0px 0px 8px #000000;
+            display: block;
+            text-align: center;
+    //                padding-bottom: rem;
+
+                }
+        #social{
+//            margin: .4rem;
+            padding-left: 3rem;
+            i{
+                padding-left: 1.5rem;
+                color: white;
+                text-shadow: 0px 0px 8px #000000;
+
+            }
+            
+        }
+    }
+}
+    
+
+//
+
+ul {
+    position: fixed;
+    right: 30px;
+    height: 100%;
+    width: 100px;
+//    top: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+ul li.nav-e {
+    list-style: none;
+    text-align: right;
+    font-family: @clight;
+
+}
+ul li.nav-e:after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 999px;
+    background: @darkgrey;
+    display:inline-block;
+}
+ul li.nav-e a {
+    font-size:0px;
+    transition:all 180ms ease-in;
+    color: red;
+//    color: @darkgrey;
+    text-decoration: none;
+}
+ul li.nav-e:hover a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: red;
+
+}
+
+//
+
+
+
+
+@media all and (min-width: 2000px) {
+    p{
+        font-size: 3rem;
+    }
+    #form{
+        margin-left: 80%;
+    }    
+}
+
+
+@media all and (max-width: 780px) {
+    #second-top-left {
+        width: @fullwidth;
+        height: 50%;
+    }
+    #second-top-right {
+        width: @fullwidth;
+        height: 50%;
+    }
+    #second-bottom-left {
+        width: @fullwidth;
+        height: 50%;
+    }
+    #second-bottom-right {
+        width: @fullwidth;
+        height: 50%;
+    }
+    #second-div-bg{
+        height: 125vh;
+    }
+    #second-div-content{
+        height: 125vh;
+    }
+    h3{
+        font-size: 3rem;
+    }
+    #third-div-content{
+        padding: 7rem;    
+        
+        #form{
+            margin: 0;
+            
+        }
+    }
+}
+
+@media all and (min-width: 780px) {
+    #second-top-left {
+        width: 50%;
+    }
+    #second-top-right {
+        width: 50%;
+    }
+    #second-bottom-left {
+        width: 50%;
+    }
+    #second-bottom-right {
+        width: 50%;
+    }
+}
+
+@media all and (max-width: 540px){
+    h1{
+        font-size: 3rem;
+    }
+}
